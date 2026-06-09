@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow-x:hidden;
+background:linear-gradient(135deg,#ffd6e8,#cce7ff);
+min-height:100vh;
+}
+
+/* Floating Hearts */
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.heart{
+position:absolute;
+bottom:-100px;
+color:rgba(255,255,255,0.7);
+font-size:25px;
+animation:float 10s linear infinite;
+}
+
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+}
+}
+
+/* Login */
+
+#loginPage{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-box{
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,0.15);
+width:350px;
+}
+
+.login-box h1{
+color:#ff4f93;
+margin-bottom:20px;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+.login-box button{
+background:#ff4f93;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:20px;
+cursor:pointer;
+margin-top:10px;
+}
+
+#error{
+color:red;
+margin-top:15px;
+font-weight:bold;
+}
+
+/* Main Page */
+
+#mainPage{
+display:none;
+text-align:center;
+padding:30px;
+}
+
+.hero{
+padding:50px 20px;
+}
+
+.hero h1{
+font-size:50px;
+color:#ff4081;
+}
+
+.hero p{
+font-size:22px;
+color:#444;
+margin-top:15px;
+}
+
+.blast{
+font-size:60px;
+animation:pop 1s infinite alternate;
+}
+
+@keyframes pop{
+from{transform:scale(1);}
+to{transform:scale(1.2);}
+}
+
+/* Letter */
+
+.letter{
+width:180px;
+height:120px;
+background:white;
+margin:50px auto;
+position:relative;
+cursor:pointer;
+border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.letter:before{
+content:'❤️';
+font-size:40px;
+position:absolute;
+top:35px;
+left:70px;
+}
+
+.message{
+display:none;
+background:white;
+padding:30px;
+border-radius:20px;
+max-width:800px;
+margin:30px auto;
+box-shadow:0 0 20px rgba(0,0,0,.15);
+line-height:1.8;
+}
+
+/* Cake */
+
+.cake-section{
+margin-top:60px;
+}
+
+.cake-section img{
+width:350px;
+max-width:90%;
+border-radius:25px;
+}
+
+/* Memories */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.gallery img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+.final-wish{
+background:white;
+padding:40px;
+margin:50px auto;
+max-width:900px;
+border-radius:25px;
+line-height:2;
+font-size:20px;
+box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage">
+
+<div class="login-box">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<h1 style="
+    font-size: 38px;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6b6b, #b5884a, #6a82fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.15);
+    letter-spacing: 2px;
+    margin-top: 20px;
+">
+    ✨ Best Wishes on Your Special Day Nanna ❤ ✨
+</h1>
+   <h2 style="font-family: 'Brush Script MT', cursive; font-size: 48px; color: #00BFFF;">
+    Every Click Leads to Love 💖
+   </h2>
+
+<h2 style="font-family:  Times New Roman; font-size:28px; color: #008080;">
+    Let's Begin with Login 🔓
+   </h2>
+
+<input type="text" id="userid" placeholder="User ID">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<div id="error"></div>
+  <style>
+body {
+    overflow-x: hidden;
+}
+
+/* Bottom decor */
+.bottom-decor {
+    font-size: 50px;   /* 👈 increases emoji size */
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Falling animation */
+.fall {
+    position: fixed;
+    top: -50px;
+    font-size: 35px;
+    animation: fall linear infinite;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+
+<div class="bottom-decor">
+    🧸 🐼 🍫 🌹 
+</div>
+
+<!-- Falling elements -->
+<div class="fall" style="left:5%; animation-duration:6s;">🎈</div>
+<div class="fall" style="left:15%; animation-duration:8s;">🎉</div>
+<div class="fall" style="left:25%; animation-duration:7s;">🎊</div>
+<div class="fall" style="left:55%; animation-duration:7s;">🎉</div>
+<div class="fall" style="left:65%; animation-duration:6s;">🎊</div>
+<div class="fall" style="left:75%; animation-duration:8s;">🎈</div>
+<div class="fall" style="left:85%; animation-duration:7s;">🎉</div>
+<div class="fall" style="left:5%; animation-duration:10s;">🎈</div>   <!-- Red -->
+<div class="fall" style="left:45%; animation-duration:9s;">🟡</div>  <!-- Yellow -->
+<div class="fall" style="left:65%; animation-duration:8s;">🟢</div>  <!-- Green -->
+<div class="fall" style="left:85%; animation-duration:6.5s;">🔵</div> <!-- Blue -->
+  
+</div>
+
+</div>
+
+<!-- MAIN PAGE -->
+
+<div id="mainPage">
+
+<div class="hero">
+
+<div class="blast">🎉🎂🎈💖🎊</div>
+
+<h1 style="font-family:  cursive; font-size: 60px;">
+    Happy wishes to My Love ❤️ (ChekkariMuthi 😘) </h1>
+
+<p style="font-family: 'Pacifico', cursive;">
+  You deserve all the happiness in the world today 🌍💕
+</p> 
+</h2>
+
+</div>
+
+<h2 style="
+    font-family: 'Brush Script MT', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(45deg, #0f4c81, #1e88e5, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+">
+    Open This With Love ❤️
+</h2>
+
+<style>
+.surprise-box{
+    width: 180px;
+    height: 180px;
+    margin: 30px auto;
+    position: relative;
+    cursor: pointer;
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Gift Box */
+.box{
+    width: 180px;
+    height: 120px;
+    background: linear-gradient(135deg,#7f6bff,hsl(182, 100%, 66%));
+    border-radius: 12px;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Ribbon Vertical */
+.box::before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:120px;
+    background:#ffd700;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Ribbon Horizontal */
+.box::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:20px;
+    background:#ffd700;
+    top:50px;
+}
+
+/* Bow */
+.bow{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:70px;
+}
+
+/* Text */
+.box-text{
+    position:absolute;
+    width:100%;
+    bottom:-45px;
+    text-align:center;
+    font-family:'Comic Sans MS', cursive;
+    font-size:28px;
+    font-weight:bold;
+    color:#ffffff;
+    text-shadow:0 0 10px #ff69b4;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+</style>
+
+<div class="surprise-box" onclick="openLetter()">
+    <div class="bow">🎀</div>
+    <div class="box"></div>
+    <div class="box-text">Open Your Surprise 🎁</div>
+</div>
+
+
+
+<audio id="music" loop>
+<source src="Song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="message" id="loveMessage">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<h2 style="
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    text-align: center;
+    color: #7b2cbf;
+    text-shadow: 0 0 10px rgba(123, 44, 191, 0.4),
+                 0 0 20px rgba(123, 44, 191, 0.3);
+    letter-spacing: 1px;
+">
+    ❤️ My Feelings For You ❤️
+</h2>
+
+<p style="font-family: 'Comic Sans MS', cursive; color: purple "> 
+
+Happiest Birthday Kannamma😘,  you are the most beautiful part of my life ❤️ (Deekshitha), and thank you soo much for being everything.
+In such a short period of time, nuv naku chala daggara ayyav nana where i see such a beautiful heart💗, amazing behavior and lovely character 🥺✨.
+You are truly one of the most amazing person I have ever met. Literally, ne loyalty ki ne oopika(patience)ki take a bow nani.
+Nijangga, Im really lucky to have you in this Era. Nuv nannu chala nammav nana, adaggane pics pedtav and 24/7 live loc pettav ilaa yevaru chestaru nana.. 
+Nenu ah nammakanni ah trust ni yeppatiki pogottukonu i promise on it. Nenu neetho matladutunnanta sepu ah vibe chala baguntadi nanna, prathisari i feel it myself. 
+Primary thing na valla nuv asalu badhapadukudadhu and yedvakudadhu, life lo adhi jaraganivvanu nana...
+Naku ninnu e life lo vadhulu kovali ani ledhu amma, but i can understand the situations 😢 and your problem too. If things works well, expectation kanna baga chuskuntta amma.
+You know, kannillu(tears) antey yela untayoo kuda teliyakunda chooskuntta nana, trust me this words are from bottom of my heart. 
+By the way i'm not expecting anything from your end - Just your parents(Smt.Sri.MAMATHA ❤️ RAJU ) and their love for us💗🫶. I truly respect your entire family.
+Me akka(SRIJA) ante nak em kopam ledu, nenu just ala casual ga antunna ne akka ani, I'm sorry if in case it hits in the way of wrong direction.
+So far mana parichayam lo na words and na behaviour valla theda ga kanipistey forgive me and Eraise it 🙏.
+I don’t know how, but slowly and naturally, you became a very important part of my life… more than I ever expected 💗🫶...
+I’m not here to pressure you or rush you into anything. I respect your feelings and your space deeply 🙏...
+But nana, I just want you to know one honest truth from my heart… my feelings for you are real, pure, and very genuine 💗💗💗...
+If you ever feel even a small place in your heart for me, I promise I will always keep you happy 🥰, respect you, support you 😊, and stand by you in every situation.
+Okati clear chesta vinu Kanna… Naakanna manchivadu dhorukutadu yemo kani, naala preminche 💖 vadu and naala choosukunevadu dhorakadu Nanna 🥺, Because naa lanti vadu inkodu undodu kabatti, No one exists like me.
+I will wait, because some feelings are not meant to be forced—they are meant to be understood slowly 💞...
+You mean a lot to me… more than words can ever explain 🥺💖...
+Love you so much Nani 💗🫶... #Deekshi #Nanna #Kanna #Amma #Nanulu #Nani #Bangaram #Bangaruthalli #Chekkarimuthi #KuuthuFellow #PottiFellow #Bey #Pandi #Panda #Pichhifruit # Deexitha #Upcoming...
+Finally, If I had one wish today, it would be to spend every birthday by your side, making more memories, sharing many laughs, and loving you a little more each day. 
+You are my greatest blessing and my favorite chapter in life. 💖🌹✨ [ILANEY UNDIPOOO NANNAAA 🥺💖] 
+  ---> From VAMSHI PRASAD - #NANNAA #BAVA #VICKY #PANDI #BARRE
+
+ <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<h1 class="birthday-wish">
+    ✨💖 WISHING YOU A HAPPIE   HAPPIER   HAPPIEST   BIRTHDAY  NANULUUU ✨💖 ✨
+    <br>
+    🌸 From Banda's Family 💗🫶 🌸
+</h1>
+
+<style>
+.birthday-wish{
+    font-family: 'Caveat', cursive;
+    font-size: 35px;
+    text-align: center;
+    line-height: 1.3;
+    margin: 30px auto;
+    background: linear-gradient(
+        90deg,
+        #ff1493,
+        #ff69b4,
+        #ff8c00,
+        #ff1493
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 15px rgba(255, 105, 180, 0.4);
+}
+</style>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<h2 class="ending-text"> Forever Yours 💚💚💚</h2>
+
+<style>
+.ending-text{
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin: 40px 0;
+    color: #90ee90; /* light green */
+    text-shadow: 0 0 10px #b6ffb6,
+                 0 0 20px #90ee90,
+                 0 0 30px #66ff66;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    to{
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+</style>
+
+</p>
+
+</div>
+
+<div class="cake-section">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<h1 class="rainbow-title">🎁Let's Begin Celebrations  🥳 🎉</h1>
+
+<style>
+.rainbow-title{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7f00,
+        #00bfff,
+        #4b0082,
+        #8f00ff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 12px rgba(255,255,255,0.4);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+</style>
+
+<br>
+
+<!-- Replace with your cake image -->
+
+<img src="Cake.png">
+
+</div>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<h1 class="memories-title">📸 Some Beautiful Memories 📸</h1>
+
+<style>
+.memories-title{
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 70px;
+    
+    background: linear-gradient(90deg, #ff4d6d, #ffb703, #90ee90, #4dabf7, #b5179e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.15);
+    animation: floatText 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatText{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-8px);
+    }
+}
+</style>
+
+<div class="gallery">
+
+<!-- Replace with your 6 photos -->
+
+<img src="Pic 1.jpg">
+<img src="Pic 2.jpg">
+<img src="Pic 3.jpg">
+<img src="Fam.jpg">
+<img src="Pic 5.jpg">
+<img src="Cute.PNG">
+<img src="Cute 2.JPG">
+<img src="Pic 6.jpg">
+
+</div>
+
+<div class="final-wish">
+
+<h2 style="
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(45deg, #0f4c81, #1e88e5, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+">
+    💕 Before Your Birthday Ends ❤️
+</h2>
+
+<p style="
+    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+    font-size: 30px;
+    line-height: 1.8;
+    text-align: center;
+    color: #ff4d6d;
+    text-shadow: 2px 2px 6px rgba(255,182,193,0.7);
+    padding: 20px;
+">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<span style="
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    font-weight: bold;
+    color: #ff1493;
+    text-shadow: 0 0 10px rgba(255,20,147,0.5);
+">
+💖 My Love 💖
+</span>
+
+<br><br>
+
+Nanna, basically this isn't just another birthday of your's.., It's the day the most precious and amazing person in my life came into this world 💖✨
+<br><br>
+
+Nijangga, I honestly don't know what I did to deserve you as trustworthy, caring, beautiful, kind-hearted, and wonderful as you 🥰
+
+<br><br>
+
+Prathisaari, nenu ninnu choosthuu unnappudu gani netho matladthu unnappudu gani I see my comfort, I feel like My best friend, My Best Well Wisher, my safe place and My Future ❤️
+
+<br><br>
+
+And inkoti jagrataga vinuu, No matter where life takes Us, I Promise You - I will stand behind you, I will support you, I will protect you and your smile, and cherish every moment we are going to spend together in Future 🌹
+
+<br><br>
+
+Finally, On this special day, I wish you endless happiness, perfect health, beautiful dreams, and a lifetime filled with love 🎂✨
+
+<br><br>
+
+Thank you soo much for being the Most Beautiful Chapter of My Life #Chakkari Muthi...💕
+
+<br><br>
+<span style="
+    font-family: 'Brush Script MT', cursive;
+    font-size: 58px;
+    font-weight: bold;
+    color: #ff7214;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+">
+🎉 Happy Birthday Nanna ❤️ 🎉
+</span>
+<br><br>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<span style="
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #32ca90d3;
+    line-height: 1.6;
+    text-shadow: 2px 2px 8px rgba(12, 213, 93, 0.25);
+    letter-spacing: 1px;
+">
+    I Love You Today<br>
+    I Love You Tomorrow<br>
+    I Love You Forever...
+</span>
+
+<br><br>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<span style="
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    font-weight: bold;
+    color: #14a9ff;
+    text-shadow: 0 0 10px rgba(255,20,147,0.5);
+">
+Yours Always 💖💖💖
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+let attempts=0;
+
+function login(){
+
+let id=document.getElementById("userid").value;
+let pass=document.getElementById("password").value;
+
+if(id==="Deekshi" && pass==="MyPrincess"){
+
+document.getElementById("loginPage").style.display="none";
+document.getElementById("mainPage").style.display="block";
+
+window.scrollTo(0,0);
+
+}
+else{
+
+attempts++;
+
+if(attempts>=3){
+
+document.getElementById("error").innerHTML=
+"Incorecct..! Try With Patience Nani ☺️.<br><br>Hint: Bava ki Call Cheye ";
+
+}else{
+
+document.getElementById("error").innerHTML=
+"Access Denied: Wrong Credentials";
+
+}
+}
+}
+
+function openLetter(){
+
+document.getElementById("loveMessage").style.display="block";
+
+let music=document.getElementById("music");
+
+music.play();
+
+document.getElementById("loveMessage").scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+/* Floating Hearts */
+
+const hearts=document.getElementById('hearts');
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement('div');
+
+heart.classList.add('heart');
+
+heart.innerHTML=['❤️','💖','💕','🎈','🎉'][Math.floor(Math.random()*5)];
+
+heart.style.left=Math.random()*100+'%';
+
+heart.style.animationDuration=(Math.random()*5+5)+'s';
+
+heart.style.fontSize=(Math.random()*25+20)+'px';
+
+hearts.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
